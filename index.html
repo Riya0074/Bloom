@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Light - Event & Party Services</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+     /* Contact Section Styles */
+.contact {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    flex: 1;
+    background-color: hwb(192 25% 14%);
+    color: white;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info h2 {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.contact-info h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ff3e3e;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #ff3e3e;
+}
+
+.info-item .content {
+    flex: 1;
+}
+
+.info-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.info-item .email-highlight {
+    color: #ff3e3e;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ff3e3e;
+    transform: translateY(-3px);
+}
+
+.contact-form {
+    flex: 1.3;
+    background-color: white;
+    padding: 3rem;
+}
+
+.contact-form h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.contact-form h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ff3e3e;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group span {
+    position: absolute;
+    left: 15px;
+    top: 45px;
+    transform: translateY(-50%);
+    color: #ff3e3e;
+}
+
+.form-group textarea + span {
+    top: 30px;
+    transform: none;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #ff3e3e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 62, 62, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-message {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    display: none;
+}
+
+.form-message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.form-message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* Responsive styles for Contact Section */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 0 1rem;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 2rem;
+    }
+}
+
+/* this is conttct css */
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #ff3e3e;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff3e3e;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image/BLOOM LIGHT PLANNER.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            filter: brightness(1.2);
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ff3e3e;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e62e2e;
+            transform: translateY(-3px);
+        }
+        
+        /* Category Section - Similar to image */
+        .categories {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+        
+        .category-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .category-item {
+            text-align: center;
+            width: 100px;
+        }
+        
+        .category-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .category-icon:hover {
+            transform: scale(1.05);
+        }
+        
+        .category-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .product-count {
+            color: #777;
+            font-size: 12px;
+        }
+        
+        /* Top Selling Products */
+        .products {
+            padding: 40px 0;
+        }
+        
+        .section-heading {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: #ff3e3e;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .product-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff3e3e;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .product-category {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .product-price {
+            color: #ff3e3e;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /* Themes Section */
+        .themes-section {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            position: relative;
+        }
+        
+        .view-all {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .view-all:hover {
+            background-color: #ff5252;
+        }
+        
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .theme-card {
+            background-color: #79b9f1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .girls-theme-card {
+            background-color: #ff9ed8;
+        }
+        
+        .theme-img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: auto;
+            padding: 50px;
+        }
+        
+        .theme-info {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            width: 100%;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .theme-count {
+            color: #777;
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #ff3e3e;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #ff3e3e;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #333;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-grid, .themes-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            .category-grid {
+                gap: 10px;
+            }
+            
+            .category-item {
+                width: 80px;
+            }
+            
+            .category-icon {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="">Bloom<span>Light</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Bloom Light</h1>
+                <p>Your one-stop shop for all your party and event supplies</p>
+                <a href="#categories" class="btn">Explore Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section (Similar to the image) -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon"  
+                    style="background-image: url('https://media.istockphoto.com/id/1204656827/photo/cute-child-on-pink-background-with-cake-and-party-confetti-birthday-party-and-big-celebration.jpg?s=612x612&w=0&k=20&c=EYiITTO6pu70V-fKkzSfqDFEkHoNVB5IVoiKXDpYo_Y='); cursor: pointer;" 
+                    onclick="window.location.href='package.html'">
+               </div>
+               
+                    <div class="category-name">Package</div>
+                    <div class="product-count">8 products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon"  
+                    style="background-image: url('https://i.pinimg.com/736x/a0/aa/b6/a0aab6f657e04155c4d9f352e32b122d.jpg'); cursor: pointer;" 
+                    onclick="window.location.href='homedecor.html'">
+               </div>
+                    <div class="category-name">Home Decoration</div>
+                    <div class="product-count">59 products</div>
+                </div>
+
+                <div class="category-item">
+                <div class="category-icon"  
+                style="background-image: url('https://i.pinimg.com/736x/4b/96/22/4b96222612d23f805ded7afcaa5697be.jpg'); cursor: pointer;" 
+                onclick="window.location.href='boys.html'"> </div>
+           
+                <div class="category-name">Boys theame</div>
+                <div class="product-count">59 products</div>
+            </div>
+
+           <div class="category-item">
+            <div class="category-icon"  
+            style="background-image: url('https://m.media-amazon.com/images/I/619WyBP1qGL._AC_UF894,1000_QL80_.jpg'); cursor: pointer;" 
+            onclick="window.location.href='Girl.html'"> </div>
+
+            <div class="category-name">Girl Theame </div>
+            <div class="product-count">59 products</div>
+        </div>
+                <div class="category-item">
+                        
+            <div class="category-icon"  
+            style="background-image: url('https://www.kiwifamilies.co.nz/wp-content/uploads/2023/10/15-Fun-Party-Games-for-8-to-12-year-olds-Doughnuts-on-strings.jpg'); cursor: pointer;" 
+            onclick="window.location.href='activities.html'"> </div>
+                    <div class="category-name">Activities</div>
+                    <div class="product-count">24 products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon"  
+            style="background-image: url('https://www.paralympic.org/sites/default/files/styles/large_original/public/images/161025092721449_Bandabi.jpg?itok=diKtFhoU'); cursor: pointer;" 
+            onclick="window.location.href='cartoon.html'"> </div>
+                    <div class="category-name">Cartoons</div>
+                    <div class="product-count">18 products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon" 
+                    style="background-image: url('https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Catalogue/mickey-mouse-jumping-bouncy20231020074404.jpeg'); cursor: pointer;" 
+            onclick="window.location.href='Bouncy.html'"> </div>
+                    <div class="category-name">Bouncy</div>
+                    <div class="product-count">7 products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon" 
+                    style="background-image: url('https://cloud.cazaar.co.uk/balloon-foil-baby-shower-baby-shower-decorations-party-supplies.jpg'); cursor: pointer;" 
+                    onclick="window.location.href='babyshower.html'"> </div>
+                    <div class="category-name">Baby Shower</div>
+                    <div class="product-count">27 products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon"
+                    style="background-image: url('https://images.meesho.com/images/products/329710020/fmkzk_512.webp'); cursor: pointer;" 
+                    onclick="window.location.href='babywlc.html'"> </div>
+                    <div class="category-name">Welcome Baby</div>
+                    <div class="product-count">14 products</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Selling Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-heading">Top Selling Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">HOT</div>
+                    <div class="product-img" style="background-image: url('https://eventorganizers.in/wp-content/uploads/2022/10/face-painting-in-bangalore-for-birthday.webp')"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Tatto artist</h3>
+                        <div class="product-category">Activities</div>
+                        <div class="product-price">₹1,000.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">HOT</div>
+                    <div class="product-img" style="background-image: url('https://www.7delights.in/assets/images/Magic-scaled.webp')"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Magic Show</h3>
+                        <div class="product-category">Activities</div>
+                        <div class="product-price">₹2,500.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">HOT</div>
+                    <div class="product-img" style="background-image: url('https://i.pinimg.com/736x/f9/64/12/f96412071bc57e20b474fef0030b4fbf.jpg')"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Rainbow Bliss</h3>
+                        <div class="product-category">Adult Birthday Decor</div>
+                        <div class="product-price">₹3,499.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="discount-badge">-14%</div>
+                    <div class="product-badge">HOT</div>
+                    <div class="product-img" style="background-image: url('https://trangphucdien.net/wp-content/uploads/2019/06/Mascot-Doremon-.jpg')"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mascot-Doremon</h3>
+                        <div class="product-category">Cartoons</div>
+                        <div class="product-price">₹3,000.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Sections -->
+    <section class="themes-section" id="themes">
+        <div class="container">
+            <!-- Boys Themes -->
+            <div class="section-title">
+                <h2>Boys Themes</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <img src="https://www.perthpartyhire.com.au/wp-content/uploads/2019/03/IMG_2000-1000x667.jpg" class="theme-img" alt="Jungle Themes">
+                    <div class="theme-info">
+                        <div class="theme-name">Jungle Themes</div>
+                        <div class="theme-count">27 products</div>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <img src="https://mediasat.info/wp-content/uploads/2023/01/Cars-disney.jpg" class="theme-img" alt="Car Themes">
+                    <div class="theme-info">
+                        <div class="theme-name">Car Themes</div>
+                        <div class="theme-count">32 products</div>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/The_Boss_Baby_poster.jpg" class="theme-img" alt="Baby Boss Themes">
+                    <div class="theme-info">
+                        <div class="theme-name">Baby Boss Themes</div>
+                        <div class="theme-count">18 products</div>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <img src="https://images.thedirect.com/media/article_full/avengers-5-characters-mcu.jpg" class="theme-img" alt="Avengers Theme">
+                    <div class="theme-info">
+                        <div class="theme-name">Avengers Theme</div>
+                        <div class="theme-count">24 products</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Girls Themes -->
+            <div class="section-title">
+                <h2>Girls Themes</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="themes-grid">
+                <div class="theme-card girls-theme-card">
+                    <img src="https://e0.pxfuel.com/wallpapers/94/22/desktop-wallpaper-barbie-dolls-pink-and-pretty-barbie-doll.jpg" class="theme-img" alt="Princess Themes">
+                    <div class="theme-info">
+                        <div class="theme-name">Princess Themes</div>
+                        <div class="theme-count">29 products</div>
+                    </div>
+                </div>
+                <div class="theme-card girls-theme-card">
+                    <img src="https://static.vecteezy.com/system/resources/previews/016/791/634/original/cute-minnie-mouse-free-vector.jpg" class="theme-img" alt="Mini Mouse Themes">
+                    <div class="theme-info">
+                        <div class="theme-name">Mini Mouse Themes</div>
+                        <div class="theme-count">21 products</div>
+                    </div>
+                </div>
+                <div class="theme-card girls-theme-card">
+                    <img src="https://static.wikia.nocookie.net/masha-and-the-bear/images/d/d1/Masha-And-The-Bear.jpg" class="theme-img" alt="Masha & The Bear Themes">
+                    <div class="theme-info">
+                        <div class="theme-name">Masha & The Bear Themes</div>
+                        <div class="theme-count">15 products</div>
+                    </div>
+                </div>
+                <div class="theme-card girls-theme-card">
+                    <img src="https://www.thespruce.com/thmb/fhHZ9nKR7NLHoLeZGJNbszkqhwg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/history-of-barbie-dolls-4056778-01-58957fc23df78caebc55ae31.jpg" class="theme-img" alt="Barbie Theme">
+                    <div class="theme-info">
+                        <div class="theme-name">Barbie Theme</div>
+                        <div class="theme-count">26 products</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> 123 Party Street, Mumbai, India</p>
+                    <p><strong>Phone:</strong> +91 98765 43210</p>
+                    <p><strong>Email:</strong> info@bloomlight.com</p>
+                    <p><strong>Working Hours:</strong> Monday to Saturday, 10am to 8pm</p>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-date">Event Date</label>
+                            <input type="date" id="event-date" name="event-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Event Details</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <div class="contact-container">
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="content">
+              <h3>Our Location</h3>
+              <p>123 Event Street, Bangalore, 560001</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="content">
+              <h3>Call Us</h3>
+              <p>+91 9876543210</p>
+              <p>+91 9876543211</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div class="content">
+              <h3>Email Us</h3>
+              <p><span class="email-highlight">riyataliyan2006@gmail.com</span></p>
+              <p>info@bloomlineevents.com</p>
+              <p>bookings@bloomlineevents.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div class="content">
+              <h3>Working Hours</h3>
+              <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+              <p>Saturday: 10:00 AM - 4:00 PM</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+    
+        <div class="contact-form">
+          <h2>Send Us A Message</h2>
+          <div id="form-success-message" class="form-message success">
+            Your message has been sent successfully! We'll get back to you soon.
+          </div>
+          <div id="form-error-message" class="form-message error">
+            Oops! Something went wrong. Please try again later.
+          </div>
+          <form action="#" method="post" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <span><i class="fas fa-user"></i></span>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <span><i class="fas fa-phone"></i></span>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <span><i class="fas fa-envelope"></i></span>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="event-date">Event Date</label>
+              <span><i class="fas fa-calendar-alt"></i></span>
+              <input type="date" id="event-date" name="event-date" min="2025-04-24">
+            </div>
+            
+            <div class="form-group">
+              <label for="event-type">Event Type</label>
+              <span><i class="fas fa-tag"></i></span>
+              <select id="event-type" name="event-type">
+                <option value="">Select Event Type</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Corporate">Corporate Event</option>
+                <option value="Birthday">Birthday Celebration</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Product Launch">Product Launch</option>
+                <option value="Conference">Conference</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <span><i class="fas fa-comment"></i></span>
+              <textarea id="message" name="message" placeholder="Tell us about your event requirements and any special requests..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Bloom Light</h3>
+                    <p>Creating magical experiences and unforgettable celebrations for all your special occasions.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Popular Categories</h3>
+                    <ul>
+                        <li><a href="#">Birthday Decorations</a></li>
+                        <li><a href="#">Baby Shower</a></li>
+                        <li><a href="#">Boy Themes</a></li>
+                        <li><a href="#">Girl Themes</a></li>
+                        <li><a href="#">Cartoons</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Bloom Light. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
