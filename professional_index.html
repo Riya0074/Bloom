@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Light - Event & Party Services</title>
+
+  <!-- Font Awesome and Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .header {
+      background-color: rgba(17, 17, 17, 0.95);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .header.scrolled {
+      padding: 10px 0;
+      background-color: rgba(17, 17, 17, 0.98);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .logo span {
+      color: #ff3e3e;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+    .nav-list {
+      display: flex;
+      list-style: none;
+    }
+    .nav-item {
+      margin: 0 2px;
+    }
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+    }
+    .nav-link.active, .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ff3e3e;
+    }
+    .cta-btn {
+      background: linear-gradient(45deg, #ff3e3e, #ff7676);
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(255, 62, 62, 0.3);
+    }
+    .cta-btn:hover {
+      background: linear-gradient(45deg, #ff5252, #ff8a8a);
+      box-shadow: 0 6px 20px rgba(255, 62, 62, 0.5);
+      transform: translateY(-3px) scale(1.03);
+    }
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      width: 30px;
+      height: 21px;
+    }
+    .bar {
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 10px;
+    }
+    @media (max-width: 992px) {
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(17, 17, 17, 0.95);
+        transition: 0.3s;
+        text-align: center;
+      }
+      .nav-menu.active {
+        left: 0;
+      }
+      .nav-list {
+        flex-direction: column;
+      }
+      .nav-item {
+        margin: 8px 0;
+      }
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff3e3e, #ff7676);
+      padding: 12px 30px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 62, 62, 0.3);
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #ff5252, #ff8a8a);
+      box-shadow: 0 6px 20px rgba(255, 62, 62, 0.5);
+      transform: translateY(-3px) scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">Bloom<span>Light</span></div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a href="#categories" class="nav-link"><i class="fas fa-th-large"></i> Categories</a></li>
+          <li class="nav-item"><a href="#products" class="nav-link"><i class="fas fa-tags"></i> Products</a></li>
+          <li class="nav-item"><a href="#themes" class="nav-link"><i class="fas fa-palette"></i> Themes</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li class="nav-item"><a href="#book" class="cta-btn">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home" data-aos="fade-up">
+  <div>
+    <h1>Welcome to Bloom Light</h1>
+    <p>Where Every Celebration Shines Brighter!</p>
+    <a href="#categories" class="btn">Explore Categories</a>
+  </div>
+</section>
+
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
+
+  mobileMenu.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      navMenu.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
