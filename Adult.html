@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Light | Adult Birthday Decorations</title>
+  <style>
+    :root {
+      --primary: #1E88E5;
+      --primary-light: #BBDEFB;
+      --secondary: #0D47A1;
+      --dark: #333333;
+      --light: #FFFFFF;
+      --gray: #F5F5F5;
+      --gray-text: #777777;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --border-radius: 12px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: #FAFAFA;
+      color: var(--dark);
+    }
+    
+    header {
+      background-color: var(--light);
+      padding: 20px 0;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .search-cart {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .search-cart button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--dark);
+      transition: color 0.3s;
+    }
+    
+    .search-cart button:hover {
+      color: var(--primary);
+    }
+    
+    .hero {
+      background: linear-gradient(45deg, var(--primary-light), #E3F2FD);
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero p {
+      font-size: 18px;
+      color: var(--gray-text);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    
+    .cta-button {
+      background: linear-gradient(45deg, #2979FF, #0D47A1);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4);
+    }
+    
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      position: relative;
+    }
+    
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    .view-all {
+      background-color: var(--light);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .view-all:hover {
+      background-color: var(--primary);
+      color: var(--light);
+    }
+    
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+    
+    .product-card {
+      background-color: var(--light);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .discount-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background-color: #2962FF;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 50px;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(41, 98, 255, 0.3);
+    }
+    
+    .product-image {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    
+    .quick-view {
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      background: rgba(30, 136, 229, 0.85);
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: 500;
+      transition: bottom 0.3s;
+      cursor: pointer;
+    }
+    
+    .product-card:hover .quick-view {
+      bottom: 0;
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-name {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    
+    .product-category {
+      color: var(--gray-text);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    
+    .price-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .current-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-right: 12px;
+    }
+    
+    .original-price {
+      font-size: 16px;
+      color: var(--gray-text);
+      text-decoration: line-through;
+    }
+    
+    .add-to-cart {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--light);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+    }
+    
+    .add-to-cart:hover {
+      background-color: var(--primary);
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    .benefits {
+      background-color: var(--light);
+      padding: 60px 0;
+      margin-bottom: 60px;
+    }
+    
+    .benefits-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    
+    .benefit-item {
+      text-align: center;
+      flex: 1;
+    }
+    
+    .benefit-icon {
+      background: linear-gradient(45deg, var(--primary-light), #E3F2FD);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 15px rgba(30, 136, 229, 0.2);
+    }
+    
+    .benefit-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .benefit-desc {
+      color: var(--gray-text);
+      font-size: 14px;
+    }
+    
+    .newsletter {
+      background: linear-gradient(135deg, #2979FF, #0D47A1);
+      padding: 60px 0;
+      color: white;
+      text-align: center;
+      margin-bottom: 60px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 25px rgba(13, 71, 161, 0.3);
+    }
+    
+    .newsletter h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .newsletter p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-input {
+      flex: 1;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 50px 0 0 50px;
+      font-size: 16px;
+    }
+    
+    .newsletter-button {
+      background-color: var(--dark);
+      color: white;
+      border: none;
+      padding: 0 30px;
+      border-radius: 0 50px 50px 0;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .newsletter-button:hover {
+      background-color: #222;
+    }
+    
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .footer-column h4::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: #2979FF;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-column a {
+      color: #CCC;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-column a:hover {
+      color: #2979FF;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #444;
+      color: #999;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 960px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .benefits-container {
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero {
+        padding: 60px 0;
+      }
+      
+      .products {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Bloom Light</div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Themes</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="search-cart">
+          <button>🔍</button>
+          <button>🛒</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <h1>Illuminate Your Celebration</h1>
+      <p>Premium adult birthday decorations that transform ordinary celebrations into extraordinary memories</p>
+      <button class="cta-button">Explore Collections</button>
+    </div>
+  </section>
+  
+  <section class="container">
+    <div class="section-title">
+      <h2>Adult Birthday Decorations</h2>
+      <a href="#" class="view-all">View All</a>
+    </div>
+    
+    <div class="products">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <span class="discount-badge">-10%</span>
+        <div class="product-image">
+          <img src="/api/placeholder/400/320" alt="Anniversary Lemon theme">
+          <div class="quick-view">Quick View</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Anniversary Lemon Theme</h3>
+          <p class="product-category">Adult Birthday Decor</p>
+          <div class="price-container">
+            <span class="current-price">₹4,499.00</span>
+            <span class="original-price">₹4,999.00</span>
+          </div>
+        </div>
+        <button class="add-to-cart">+</button>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card">
+        <span class="discount-badge">-10%</span>
+        <div class="product-image">
+          <img src="/api/placeholder/400/320" alt="Lime Hearts">
+          <div class="quick-view">Quick View</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Lime Hearts</h3>
+          <p class="product-category">Adult Birthday Decor</p>
+          <div class="price-container">
+            <span class="current-price">₹4,499.00</span>
+            <span class="original-price">₹4,999.00</span>
+          </div>
+        </div>
+        <button class="add-to-cart">+</button>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card">
+        <span class="discount-badge">-10%</span>
+        <div class="product-image">
+          <img src="/api/placeholder/400/320" alt="Adult Ring Decor">
+          <div class="quick-view">Quick View</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Adult Ring Decor</h3>
+          <p class="product-category">Adult Birthday Decor</p>
+          <div class="price-container">
+            <span class="current-price">₹4,499.00</span>
+            <span class="original-price">₹4,999.00</span>
+          </div>
+        </div>
+        <button class="add-to-cart">+</button>
+      </div>
+      
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/api/placeholder/400/320" alt="Lavender Luxe">
+          <div class="quick-view">Quick View</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Lavender Luxe</h3>
+          <p class="product-category">Adult Birthday Decor</p>
+          <div class="price-container">
+            <span class="current-price">₹4,999.00</span>
+          </div>
+        </div>
+        <button class="add-to-cart">+</button>
+      </div>
+      
+      <!-- Product 5 -->
+      <div class="product-card">
+        <span class="discount-badge">-33%</span>
+        <div class="product-image">
+          <img src="/api/placeholder/400/320" alt="Shimmering Hearts">
+          <div class="quick-view">Quick View</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Shimmering Hearts</h3>
+          <p class="product-category">Adult Birthday Decor</p>
+          <div class="price-container">
+            <span class="current-price">₹1,999.00</span>
+            <span class="original-price">₹2,999.00</span>
+          </div>
+        </div>
+        <button class="add-to-cart">+</button>
+      </div>
+      
+      <!-- Product 6 -->
+      <div class="product-card">
+        <span class="discount-badge">-20%</span>
+        <div class="product-image">
+          <img src="/api/placeholder/400/320" alt="Rosegold Glitter">
+          <div class="quick-view">Quick View</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Rosegold Glitter</h3>
+          <p class="product-category">Adult Birthday Decor</p>
+          <div class="price-container">
+            <span class="current-price">₹3,999.00</span>
+            <span class="original-price">₹4,999.00</span>
+          </div>
+        </div>
+        <button class="add-to-cart">+</button>
+      </div>
+    </div>
+  </section>
+  
+  
+        
+  
+  <section class="container">
+    <div class="newsletter">
+      <h3>Get 10% Off Your First Order</h3>
+      <p>Subscribe to our newsletter and receive exclusive offers, decoration tips, and early access to new collections.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" class="newsletter-input">
+        <button type="submit" class="newsletter-button">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">On Sale</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="#">support@bloomlight.com</a></li>
+            <li><a href="#">+91 9876543210</a></li>
+            <li><a href="#">Delhi, Mumbai, Bangalore</a></li>
+            <li><a href="#">Mon-Sat: 10:00 - 18:00</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        © 2025 Bloom Light. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

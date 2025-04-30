@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys Theme Decoration - Swastik Entertainments</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #f3f8fa;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 15px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            height: 50px;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 12px;
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: white;
+            bottom: -2px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .right-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .right-nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .right-nav a:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+        
+        .icons {
+            font-size: 18px;
+        }
+        
+        .cart-price {
+            font-weight: bold;
+            color: white;
+            margin-left: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+            color: white;
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 10%),
+                radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.3) 0%, transparent 15%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 0%, transparent 12%),
+                radial-gradient(circle at 70% 90%, rgba(255, 255, 255, 0.3) 0%, transparent 8%);
+        }
+        
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 52px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .breadcrumb {
+            margin-top: 20px;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+        
+        .themes-section {
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: #2193b0;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            padding: 40px 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .theme-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .theme-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .theme-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+        
+        .theme-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            transition: all 0.4s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .theme-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #d1f1ff, #e6f2ff);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-image::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            top: -50%;
+            left: -50%;
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+        
+        .theme-card:hover .theme-image::before {
+            left: 100%;
+        }
+        
+        .theme-image img {
+            max-width: 85%;
+            max-height: 85%;
+            transition: transform 0.5s;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+        }
+        
+        .theme-card:hover .theme-image img {
+            transform: scale(1.1);
+        }
+        
+        .theme-title {
+            padding: 20px 15px;
+            position: relative;
+        }
+        
+        .theme-title h3 {
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s;
+        }
+        
+        .theme-card:hover .theme-title h3 {
+            color: #2193b0;
+        }
+        
+        .theme-title p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .products-badge {
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+            color: white;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .top-themes {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff9500;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s;
+        }
+        
+        .theme-card:nth-child(1) .top-themes,
+        .theme-card:nth-child(2) .top-themes,
+        .theme-card:nth-child(5) .top-themes {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .explore-btn {
+            background: transparent;
+            border: 2px solid #2193b0;
+            color: #2193b0;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-top: 15px;
+            display: inline-block;
+            transition: all 0.3s;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .theme-card:hover .explore-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .explore-btn:hover {
+            background: #2193b0;
+            color: white;
+        }
+        
+        /* Hamburger menu for mobile */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                margin-right: 15px;
+            }
+            .nav-container {
+                justify-content: flex-end;
+            }
+        }
+        
+        /* Banner */
+        .banner {
+            background: linear-gradient(45deg, #d1f1ff, #e6f0ff);
+            padding: 50px 0;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .banner h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2193b0;
+        }
+        
+        .banner p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: #666;
+        }
+        
+        .banner-btn {
+            background: #2193b0;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .banner-btn:hover {
+            background: #1c7a92;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(33, 147, 176, 0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #2193b0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #2193b0;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* Animation effects */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div style="display: flex; align-items: center;">
+                    <div class="hamburger">☰</div>
+                    <img src="/api/placeholder/120/50" alt="Swastik Entertainments" class="logo">
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home Decoration</a></li>
+                        <li><a href="#">Boys Theme</a></li>
+                        <li><a href="#">Girls Theme</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="right-nav">
+                    <a href="#">Login / Register</a>
+                    <div class="icon-btn"><span class="icons">🔍</span></div>
+                    <div class="icon-btn"><span class="icons">💖</span></div>
+                    <div class="icon-btn"><span class="icons">🛒</span></div>
+                    <span class="cart-price">₹0.00</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Boys Theme Decoration</h1>
+            <p>Make your little hero's special day extraordinary with our awesome decoration themes!</p>
+            <div class="breadcrumb">
+                <a href="#">HOME</a> / BOYS THEME DECORATION
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Grid -->
+    <section class="themes-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Epic Themes for Awesome Boys</h2>
+                <p>Browse our collection of exciting decoration themes for your little champion's special day</p>
+            </div>
+            <div class="theme-grid">
+                <!-- Sports Themes -->
+                <div class="theme-card">
+                    <div class="top-themes">Popular</div>
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Sports Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Sports Themes</h3>
+                        <p>For the little sports champion</p>
+                        <span class="products-badge">7 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Spiderman Themes -->
+                <div class="theme-card">
+                    <div class="top-themes">Bestseller</div>
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Spiderman Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Spiderman Themes</h3>
+                        <p>Amazing superhero decorations</p>
+                        <span class="products-badge">8 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Space Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Space Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Space Themes</h3>
+                        <p>Out of this world party decorations</p>
+                        <span class="products-badge">11 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Paw Patrol Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Paw Patrol Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Paw Patrol Themes</h3>
+                        <p>Rescue mission party decor</p>
+                        <span class="products-badge">4 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Minion Themes -->
+                <div class="theme-card">
+                    <div class="top-themes">Trending</div>
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Minion Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Minion Themes</h3>
+                        <p>Mischievous minion decorations</p>
+                        <span class="products-badge">3 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Mickey Mouse Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Mickey Mouse Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Mickey Mouse Themes</h3>
+                        <p>Classic cartoon celebrations</p>
+                        <span class="products-badge">3 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Lego Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Lego Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Lego Themes</h3>
+                        <p>Building block party fun</p>
+                        <span class="products-badge">3 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Jungle Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Jungle Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Jungle Themes</h3>
+                        <p>Wild adventure decorations</p>
+                        <span class="products-badge">27 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Dinosaur Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Dinosaur Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Dinosaur Themes</h3>
+                        <p>Prehistoric party decorations</p>
+                        <span class="products-badge">5 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Cocomelon Themes -->
+                <div class="theme-card">
+                    <div class="theme-image">
+                        <img src="/api/placeholder/150/150" alt="Cocomelon Themes" class="float-animation">
+                    </div>
+                    <div class="theme-title">
+                        <h3>Cocomelon Themes</h3>
+                        <p>Musical nursery rhyme celebrations</p>
+                        <span class="products-badge">13 products</span>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="container">
+            <h2>Need a Custom Theme?</h2>
+            <p>We can create personalized decoration themes based on your preferences. Contact our team for custom decoration packages.</p>
+            <a href="contact.html" class="banner-btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About Bloomlight</h4>
+                    <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">We specialize in creating magical decoration themes for birthday celebrations, making your special moments unforgettable.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <div class="icon-btn">📱</div>
+                        <div class="icon-btn">💌</div>
+                        <div class="icon-btn">📸</div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Theme Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Girls Themes</a></li>
+                        <li><a href="#">Boys Themes</a></li>
+                        <li><a href="#">Home Decoration</a></li>
+                        <li><a href="#">Party Supplies</a></li>
+                        <li><a href="#">Activities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li style="color: #ccc;">📍 123 Main Street, City</li>
+                        <li style="color: #ccc;">📞 +91 9876543210</li>
+                        <li style="color: #ccc;">✉️ info@bloomlineevents.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Bloomlight
+                . All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.theme-card');
+            
+            function checkScroll() {
+                const triggerBottom = window.innerHeight * 0.8;
+                
+                cards.forEach((card, index) => {
+                    const cardTop = card.getBoundingClientRect().top;
+                    
+                    if (cardTop < triggerBottom) {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, index * 100); 
+                    }
+                });
+            }
+            
+            // Initial setup
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkScroll);
+            
+            // Initial check
+            checkScroll();
+        });
+    </script>
+</body>
+</html>
